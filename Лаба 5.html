@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменение цвета текста</title>
+    <style>
+        #text {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<p id="text">Нажми на кнопку, чтобы изменить цвет текста</p>
+<button onclick="changeTextColor()">Изменить цвет</button>
+
+<script>
+    let clickCount = 0;
+
+    function changeTextColor() {
+        const textElement = document.getElementById('text');
+       clickCount++;
+
+        if (clickCount === 1) {
+            textElement.style.color = 'red';
+        } else if (clickCount === 2) {
+            textElement.style.color = 'green';
+        } else {
+            textElement.style.color = '';
+            clickCount = 0;
+        }
+    }
+</script>
+
+</body>
+</html>
